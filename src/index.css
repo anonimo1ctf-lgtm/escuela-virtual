@@ -1,0 +1,235 @@
+
+/* Estilos generales de nuestra escuela virtual */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f4f7fb;
+  color: #1e293b;
+  font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal */
+
+#root {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Títulos */
+
+h1 {
+  color: #1d4ed8;
+  font-size: 36px;
+}
+
+h2 {
+  color: #334155;
+  font-size: 24px;
+}
+
+/* Botones */
+
+button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+
+/* Panel del estudiante */
+
+header {
+  margin-bottom: 40px;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Tarjetas del estudiante */
+
+section {
+  background-color: white;
+  padding: 24px;
+  margin: 20px 0;
+  border-radius: 12px;
+  text-align: left;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+section h3 {
+  color: #2563eb;
+  margin-top: 0;
+}
+
+section p {
+  color: #64748b;
+}
+
+/* Separación del botón */
+
+main button {
+  margin-top: 20px;
+}
+
+
+/* Formulario de registro */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Etiquetas del formulario */
+
+form label {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* Campos del formulario */
+
+form input,
+form select {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* Tarjeta de inicio de sesión */
+
+.pantalla-acceso section {
+  background-color: white;
+  padding: 35px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Campos de acceso */
+
+.pantalla-acceso form {
+  text-align: left;
+}
+
+.pantalla-acceso section > p button {
+  background: none;
+  color: #2563eb;
+  padding: 4px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.pantalla-acceso section > p button:hover {
+  background: none;
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.pantalla-registro section {
+  padding: 35px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.pantalla-registro form {
+  text-align: left;
+}
+
+/* Enlace para regresar al inicio de sesión */
+
+.pantalla-registro section > p button {
+  background: none;
+  color: #2563eb;
+  padding: 4px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.pantalla-registro section > p button:hover {
+  background: none;
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* Tarjeta de recuperación */
+
+.pantalla-recuperacion section {
+  padding: 35px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Formulario */
+
+.pantalla-recuperacion form {
+  text-align: left;
+}
+
+/* Enlace para volver */
+
+.pantalla-recuperacion section > p button {
+  background: none;
+  color: #2563eb;
+  padding: 4px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.pantalla-recuperacion section > p button:hover {
+  background: none;
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* Botones deshabilitados */
+
+button:disabled {
+  background-color: #94a3b8;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* ====================================
+   ESTILOS GENERALES DE AUTENTICACIÓN
+   ==================================== */
+
+.pantalla-acceso,
+.pantalla-registro,
+.pantalla-recuperacion {
+  max-width: 440px;
+  margin: 40px auto;
+}
+
+/* Botones principales de los formularios */
+
+.pantalla-acceso form button,
+.pantalla-registro form button,
+.pantalla-recuperacion form button {
+  width: 100%;
+}
+
