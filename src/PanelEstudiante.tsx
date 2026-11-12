@@ -35,7 +35,7 @@ function Aplicacion() {
   return (
     <div>
       <header>
-        <h1>Mi Escuela Virtual</h1>
+        <h1>Escuela Virtual</h1>
         <p>Tu camino hacia la UNAM comienza aquí</p>
       </header>
 

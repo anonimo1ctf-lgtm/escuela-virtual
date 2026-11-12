@@ -19,7 +19,6 @@ function irAAcceso() {
 function irARecuperacion() {
   cambiarPantallaActual('recuperacion')
 }
-
   return (
     <>
       {pantallaActual === 'acceso' && (
