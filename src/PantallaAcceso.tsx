@@ -1,3 +1,6 @@
+import { useState as usarEstado } from 'react'
+import { clienteSupabase } from './supabase'
+
 function PantallaAcceso({
   irARegistro,
   irARecuperacion
@@ -5,6 +8,33 @@ function PantallaAcceso({
   irARegistro: () => void
   irARecuperacion: () => void
 }) {
+  const [correo, cambiarCorreo] = usarEstado('')
+  const [contrasena, cambiarContrasena] = usarEstado('')
+
+  async function iniciarSesion() {
+    if (correo.trim() === '' || contrasena === '') {
+      alert('Por favor, ingresa tu correo y contraseña.')
+      return
+    }
+
+    try {
+      const { error } = await clienteSupabase.auth.signInWithPassword({
+        email: correo.trim(),
+        password: contrasena
+      })
+
+      if (error) {
+        alert('No se pudo iniciar sesión. Revisa tus datos y confirma tu correo.')
+        return
+      }
+
+      alert('¡Inicio de sesión correcto!')
+      cambiarContrasena('')
+    } catch {
+      alert('No se pudo conectar con Supabase.')
+    }
+  }
+
   return (
     <main className="pantalla-acceso">
       <section>
@@ -17,11 +47,14 @@ function PantallaAcceso({
           <label htmlFor="correoAcceso">
             Correo electrónico:
           </label>
-
+          
           <input
             id="correoAcceso"
             type="email"
             placeholder="Escribe tu correo"
+            value={correo}
+            onChange={(evento) => cambiarCorreo(evento.target.value)}
+            autoComplete="username"
           />
 
           <label htmlFor="contrasenaAcceso">
@@ -32,9 +65,11 @@ function PantallaAcceso({
             id="contrasenaAcceso"
             type="password"
             placeholder="Escribe tu contraseña"
+            value={contrasena}
+            onChange={(evento) => cambiarContrasena(evento.target.value)}
+            autoComplete="current-password"
           />
-
-          <button type="button">
+          <button type="button" onClick={iniciarSesion}>
             Iniciar sesión
           </button>
         </form>        
